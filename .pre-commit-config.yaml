@@ -22,8 +22,9 @@ repos:
       args: ["--py37-plus"]
     - id: nbqa-isort
       args: ["--float-to-top"]
-- repo: https://github.com/kynan/nbstripout
-  rev: 0.6.1
+- repo: local
   hooks:
-    - id: nbstripout
-      files: ".ipynb"
+    - id: nb-clean
+      name: Check nbs are clearn
+      entry: check_nb_clean.sh
+      language: script

@@ -26,5 +26,5 @@ repos:
   hooks:
     - id: nb-clean
       name: Check nbs are clearn
-      entry: check_nb_clean.sh
+      entry: scripts/check_nb_clean.sh
       language: script

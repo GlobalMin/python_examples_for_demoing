@@ -33,6 +33,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip setuptools
           python3 -m pip install .[dev,publishing]
+          python3 -m pip install pre-commit
       - name: Run unit tests
         run: pytest -v
       - name: Pre-commit check

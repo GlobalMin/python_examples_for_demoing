@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: ['ubuntu-latest','windows-latest']
+        os: ['ubuntu-latest']
         python-version: ['3.7']
     steps:
       - uses: actions/checkout@v3
@@ -38,7 +38,7 @@ jobs:
 
   lint:
     name: Linting build
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest','windows-latest']
     strategy:
       fail-fast: true
     steps:
